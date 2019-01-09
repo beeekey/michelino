@@ -27,6 +27,10 @@ namespace Michelino
                 motor.setSpeed(speed);
                 motor.run(L298N::FORWARD);
             }
+            else if (speed == 0)
+            {
+              motor.stop();
+            }
             else {
                 motor.setSpeed(-speed);
                 motor.run(L298N::BACKWARD);
@@ -36,6 +40,11 @@ namespace Michelino
         int getSpeed() const
         {
             return currentSpeed;
+        }
+
+        void stop() 
+        {
+          motor.stop();
         }
         
     private:

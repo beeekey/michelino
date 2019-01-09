@@ -37,6 +37,11 @@ namespace Michelino
         {
             return currentSpeed;
         }
+
+        void stop() 
+        {
+          motor.stop();
+        }
         
     private:
         AF_DCMotor motor;

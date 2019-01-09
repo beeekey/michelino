@@ -23,6 +23,8 @@ namespace Michelino
         void write(int angle)
         {
             servo.write(angle);
+            Serial.print("angle: ");
+            Serial.println(angle);
         }
 
         void attach(int pin)

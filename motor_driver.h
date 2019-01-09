@@ -23,5 +23,7 @@ namespace Michelino
          * @return The current speed of the motor with range -255 to 255.
          */
         virtual int getSpeed() const = 0;            
+
+        virtual void stop() = 0;
     };
 };
